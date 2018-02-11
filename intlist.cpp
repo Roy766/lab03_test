@@ -70,19 +70,25 @@ int IntList::max() const {
 // returns average (arithmetic mean) of all values, or
 // 0 if list is empty
 double IntList::average() const {
+    if (count() == 0)
+        return 0;
     double total = sum();
     return total / count();
 }
 
 // inserts value as new node at beginning of list
 void IntList::insertFirst(int value) {
-    // IMPLEMENT
+    Node* newFirst = new Node;
+    newFirst->info = value;
+    newFirst->next = first->next;
+    first = newFirst;
 }
 
 //Assignment operator should copy the list from the source
 //to this list, deleting/replacing any existing nodes
 IntList& IntList::operator=(const IntList& source){
-    //IMPLEMENT
+    Node* newListFirst = new Node;
+    newListFirst->next;
     return *this;
 }
 
