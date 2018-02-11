@@ -21,7 +21,14 @@ IntList::~IntList() {
 
 // return sum of values in list
 int IntList::sum() const {
-    return 0; // REPLACE THIS NON-SOLUTION
+    int sum = 0;
+    Node* temp = new Node;
+    temp = first;
+    while(temp->next)
+    {
+        sum += temp->info;
+    }
+    return sum;
 }
 
 // returns true if value is in the list; false if not
@@ -32,7 +39,7 @@ bool IntList::contains(int value) const {
 // returns maximum value in list, or 0 if empty list
 int IntList::max() const {
     return 0; // REPLACE THIS NON-SOLUTION
-    
+
 }
 
 // returns average (arithmetic mean) of all values, or
