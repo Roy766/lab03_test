@@ -82,8 +82,13 @@ double IntList::average() const {
 void IntList::insertFirst(int value) {
     Node* newFirst = new Node;
     newFirst->info = value;
-    newFirst->next = first->next;
-    first = newFirst;
+    if (count() == 0)
+        first = newFirst;
+    else
+    {
+        newFirst->next = first->next;
+        first = newFirst;
+    }
 }
 
 //Assignment operator should copy the list from the source
