@@ -10,7 +10,7 @@ using std::cout;
 
 // copy constructor
 IntList::IntList(const IntList& source) {
-    //IMPLEMENT THIS
+
 }
 
 // destructor deletes all nodes
@@ -51,6 +51,8 @@ bool IntList::contains(int value) const {
 
 // returns maximum value in list, or 0 if empty list
 int IntList::max() const {
+    if (count() == 0)
+        return 0;
     int max = first->info;
 
     Node* temp = new Node;
