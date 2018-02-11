@@ -87,8 +87,8 @@ void IntList::insertFirst(int value) {
 //Assignment operator should copy the list from the source
 //to this list, deleting/replacing any existing nodes
 IntList& IntList::operator=(const IntList& source){
-    Node* newListFirst = new Node;
-    newListFirst->next;
+//    Node* newListFirst = new Node;
+//    newListFirst->next;
     return *this;
 }
 
