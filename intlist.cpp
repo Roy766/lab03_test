@@ -86,7 +86,7 @@ void IntList::insertFirst(int value) {
         first = newFirst;
     else
     {
-        newFirst->next = first->next;
+        newFirst->next = first;
         first = newFirst;
     }
 }
