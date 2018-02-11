@@ -27,6 +27,7 @@ int IntList::sum() const {
     while(temp != nullptr)
     {
         sum += temp->info;
+        temp = temp->next;
     }
     return sum;
 }
