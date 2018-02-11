@@ -34,6 +34,8 @@ int IntList::sum() const {
 
 // returns true if value is in the list; false if not
 bool IntList::contains(int value) const {
+    Node* temp = new Node;
+    temp = first;
     while(temp != nullptr)
     {
         if (temp->info == value)
