@@ -70,7 +70,7 @@ int IntList::max() const {
 // returns average (arithmetic mean) of all values, or
 // 0 if list is empty
 double IntList::average() const {
-    int total = sum();
+    double total = sum();
     return total / count();
 }
 
