@@ -24,7 +24,7 @@ int IntList::sum() const {
     int sum = 0;
     Node* temp = new Node;
     temp = first;
-    while(temp->next)
+    while(temp)
     {
         sum += temp->info;
     }
