@@ -71,7 +71,7 @@ int IntList::max() const {
 // 0 if list is empty
 double IntList::average() const {
     int total = sum();
-    return total / count;
+    return total / count();
 }
 
 // inserts value as new node at beginning of list
