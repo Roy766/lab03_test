@@ -42,6 +42,7 @@ bool IntList::contains(int value) const {
         {
             return true;
         }
+        temp = temp->next;
     }
 
     return false;
