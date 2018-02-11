@@ -34,7 +34,15 @@ int IntList::sum() const {
 
 // returns true if value is in the list; false if not
 bool IntList::contains(int value) const {
-    return false; // REPLACE THIS NON-SOLUTION
+    while(temp != nullptr)
+    {
+        if (temp->info == value)
+        {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 // returns maximum value in list, or 0 if empty list
