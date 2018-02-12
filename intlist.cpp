@@ -11,12 +11,21 @@ using std::cout;
 
 // copy constructor
 IntList::IntList(const IntList& source) {
+ 
 
 }
 
 // destructor deletes all nodes
 IntList::~IntList() {
     //IMPLEMENT THIS
+ Node *n = head;
+ while(n!=0)
+ {
+  Node * ne = n->next;
+  delete n;
+  n = ne;
+ }
+ head = 0;
 }
 
 
