@@ -1,7 +1,7 @@
 // intlist.cpp
 // Implements class IntList
 // YOUR NAME(S), AND DATE
-//Jack Brockett, Roy 
+//Jack Brockett, Aidan Babb 2/11/2018
  
 #include "intlist.h"
 
