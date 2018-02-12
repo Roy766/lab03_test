@@ -11,15 +11,15 @@ using std::cout;
 
 // copy constructor
 IntList::IntList(const IntList& source) {
- if (source.head == NULL)
+ if (source.first == NULL)
  {
-  head = NULL;
+  first = NULL;
  }
  else
  {
-  head = new Node(source.head->info);
-  Node *c = head;
-  Node *sh = source.head;
+  first = new Node(source.first->info);
+  Node *c = first;
+  Node *sh = source.first;
   Node *cs = sh;
   while (cs->next !=NULL)
   {
@@ -34,14 +34,14 @@ IntList::IntList(const IntList& source) {
 // destructor deletes all nodes
 IntList::~IntList() {
     //IMPLEMENT THIS
- Node *n = head;
+ Node *n = first;
  while(n!=0)
  {
   Node * ne = n->next;
   delete n;
   n = ne;
  }
- head = 0;
+ first= 0;
 }
 
 
@@ -120,7 +120,8 @@ void IntList::insertFirst(int value) {
 //Assignment operator should copy the list from the source
 //to this list, deleting/replacing any existing nodes
 IntList& IntList::operator=(const IntList& source){
-    return *this;
+    
+ return *this;
 }
 
 
