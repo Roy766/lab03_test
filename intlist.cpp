@@ -11,7 +11,23 @@ using std::cout;
 
 // copy constructor
 IntList::IntList(const IntList& source) {
- 
+ if (source.head == NULL)
+ {
+  head = NULL;
+ }
+ else
+ {
+  head = new Node(source.head->info);
+  Node *c = head;
+  Node *sh = source.head;
+  Node *cs = sh;
+  while (cs->next !=NULL)
+  {
+    c->next = new Node (cs ->next->info);
+    cs = cs->next;
+    c = c->next;
+  }
+ }
 
 }
 
